@@ -12,6 +12,7 @@ class NativeDateTimeInput(DateTimeInput):
         new_value = value
         if value and not isinstance(value, str):
                 new_value = value.isoformat()
+        new_value = new_value[:-2] + "00"  # value comparisons don't work on seconds?!
         return super().render(name, new_value, attrs=attrs, renderer=renderer)
 
 
@@ -73,7 +74,7 @@ class RestrictedDateTimeField(DateTimeField):
             if self.min_value is not None and (_min is None or self.min_value > _min):
                 _min = self.min_value
             if _min is not None:
-                attrs["min"] = f"{_min:%Y-%m-%dT%H:%M:%S}"
+                attrs["min"] = f"{_min:%Y-%m-%dT00:00:00}"
             
             # is there a max restriction?
             _max = None
@@ -82,7 +83,7 @@ class RestrictedDateTimeField(DateTimeField):
             if self.max_value is not None and (_max is None or self.max_value < _max):
                 _max = self.max_value
             if _max is not None:
-                attrs["max"] = f"{_max:%Y-%m-%dT%H:%M:%S}"
+                attrs["max"] = f"{_max:%Y-%m-%dT23:59:59}"
         
         return attrs
     
