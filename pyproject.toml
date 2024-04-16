@@ -32,14 +32,14 @@ classifiers = [
 ]
 
 [project.urls]
-#Homepage = "https://example.com"
+Homepage = "https://github.com/detlefla/django-restricted-fields"
 #Documentation = "https://readthedocs.org"
-#Repository = "https://github.com/me/spam.git"
-#Issues = "https://github.com/me/spam/issues"
+Repository = "https://github.com/detlefla/django-restricted-fields"
+Issues = "https://github.com/detlefla/django-restricted-fields/issues"
 #Changelog = "https://github.com/me/spam/blob/master/CHANGELOG.md"
 
 [tool.setuptools.dynamic]
 version = {file = "src/django_restricted_fields/VERSION"}
-readme = {file = ["README.rst"]}
+readme = {file = ["README.md"]}
 dependencies = {file = ["requirements.in"]}
 optional-dependencies = {dev = { file = ["requirements-dev.txt"] }}
