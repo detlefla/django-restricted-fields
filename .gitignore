@@ -1,0 +1,7 @@
+*~
+DEADJOE
+**/__pycache__/
+**/*.pyc
+venv*
+dist/
+src/*.egg-info/
