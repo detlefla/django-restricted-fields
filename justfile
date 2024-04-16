@@ -9,3 +9,11 @@ sync:
 # update locked dev requirements
 update:
     uv pip compile -U -o requirements-dev.txt requirements-dev.in
+
+# check for upload
+ckupload:
+    twine check dist/*
+
+# upload to pypi
+upload:
+    twine upload --repository pypi dist/*
