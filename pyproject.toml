@@ -8,7 +8,7 @@ name = "django-restricted-fields"
 dynamic = ["version", "readme", "dependencies", "optional-dependencies"]
 description = "Provides date and date/time fields with restrictions for Django forms."
 keywords = ["web", "django", "forms"]
-requires-python = ">= 3.10"
+requires-python = ">= 3.9"
 authors = [
   {name = "Detlef Lannert", email = "detlef@lannert.de"},
 ]
