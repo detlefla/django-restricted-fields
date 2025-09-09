@@ -1,7 +1,0 @@
--r requirements.in
-django-stubs
-ipython
-mypy
-ruff
-build
-twine
