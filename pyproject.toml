@@ -4,7 +4,7 @@ build-backend = "uv_build"
 
 [project]
 name = "django-restricted-fields"
-version = "0.4.0"
+version = "0.4.2"
 readme = "README.md"
 dependencies = [
     "django >= 4.0",
@@ -48,3 +48,7 @@ dev = [
     "ipython>=8.18.1",
     "mypy>=1.17.1",
 ]
+
+[tool.uv.build-backend]
+wheel-exclude = ["*\\~", ".\\#*"]
+source-exclude = ["*\\~", ".\\#*"]
